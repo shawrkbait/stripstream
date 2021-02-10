@@ -1,0 +1,21 @@
+[myrepo-appstream]
+name=My repo
+baseurl=file:///srv/8-repo/rhel-8-for-x86_64-appstream-rpms
+gpgcheck=0
+enabled=1
+[myrepo-base]
+name=My repo
+baseurl=file:///srv/8-repo/rhel-8-for-x86_64-baseos-rpms
+gpgcheck=0
+enabled=1
+
+[main]
+gpgcheck=1
+clean_requirements_on_remove=True
+best=True
+skip_if_unavailable=False
+reposdir=/dev/null
+installroot=/tmp/null
+
+# Change this if running on Fedora, etc.
+module_platform_id=platform:el8
